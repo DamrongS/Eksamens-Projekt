@@ -1,0 +1,14 @@
+{
+    "users": {
+        "bd4542be-938d-4ed8-97c2-6596e6cc70d2": {
+            "username": "admin",
+            "surname": "Christoffer",
+            "lastname": "Damrong",
+            "password": "cebe775244f4035eb17e82a4d465caa843fae5a319f03f158e8927ce897d8109",
+            "salt": "9c9363fd-b6b9-4638-b4ff-99d1530d248d",
+            "account": {},
+            "transaction": [],
+            "loans": []
+        }
+    }
+}
