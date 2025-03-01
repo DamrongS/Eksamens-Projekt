@@ -25,7 +25,7 @@ def superSecretHashingAlgorithm(password, salt):
     hashed = hashlib.sha256(combined.encode()).hexdigest()
     return hashed
 
-# [[ using the uuid library to generate a unique userId and a saltId for every user ]]
+# [[ using the uuid library to generate a unique userId and saltId for every user ]]
 def register_user(username, surname, lastname, password):
     database = load_database()
     userId = str(uuid.uuid4())
