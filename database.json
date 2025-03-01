@@ -1,13 +1,25 @@
 {
     "users": {
-        "bd4542be-938d-4ed8-97c2-6596e6cc70d2": {
+        "ebef3511-42b9-48ea-a4dc-f4fdc9b67778": {
             "username": "admin",
             "surname": "Christoffer",
-            "lastname": "Damrong",
-            "password": "cebe775244f4035eb17e82a4d465caa843fae5a319f03f158e8927ce897d8109",
-            "salt": "9c9363fd-b6b9-4638-b4ff-99d1530d248d",
-            "account": {},
-            "transaction": [],
+            "lastname": "Damrong Blond Schj\u00f8dt",
+            "password": "078db3a50910ac51b82dfd200ea55e3cb2a2423ac8a213587a560cdaf3c71018",
+            "salt": "6db373eb-6c56-4fa5-ae01-29a7d22797a5",
+            "balance": 0,
+            "accounts": {},
+            "transactions": [],
+            "loans": []
+        },
+        "10a95ad7-11e0-4dcf-a2eb-57f25eaffbe8": {
+            "username": "PepsiCo",
+            "surname": "Christoffer",
+            "lastname": "Damrong Blond Schj\u00f8dt",
+            "password": "5cf0556288466daba2ffdf9f79aa12406f65d277555f610327b9056cb8022eb5",
+            "salt": "7ae2c8b4-fa60-4ca0-95c5-f80f357f70a3",
+            "balance": 0,
+            "accounts": {},
+            "transactions": [],
             "loans": []
         }
     }
