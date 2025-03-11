@@ -58,7 +58,7 @@ def AddAcountToUser():
     }
 
 # [[ logs the user in ]]
-def login_user(username, password):
+def login_user(username, password, root):
     database = load_database()
     for userId, userData in database["users"].items():
         if userData["username"] == username:
@@ -66,6 +66,7 @@ def login_user(username, password):
             hashedPassword = userData["password"]
             if superSecretHashingAlgorithm(password, salt) == hashedPassword:
                 #messagebox.showinfo("Login Success", f"Welcome {userData['surname']} {userData['lastname']}!")
+                root.destroy()
                 return userId
             else:
                 #messagebox.showerror("Error", "Invalid password!")

@@ -8,7 +8,7 @@ import remotes
 def create_gui():
     root = tk.Tk()
     root.title("User Authentication")
-    root.geometry("400x300")
+    root.geometry("400x600")
 
     tk.Label(root, text="Username:").pack(pady=5)
     username_entry = tk.Entry(root)
