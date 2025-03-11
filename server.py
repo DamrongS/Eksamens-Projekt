@@ -31,7 +31,6 @@ def register_user(username, surname, lastname, password):
     userId = str(uuid.uuid4())
     salt = str(uuid.uuid4())
     hashedPassword = superSecretHashingAlgorithm(password, salt)
-    balance = 0
 
     # Setup initial data
     database["users"][userId] = {
@@ -40,8 +39,10 @@ def register_user(username, surname, lastname, password):
         "lastname": lastname,
         "password": hashedPassword,
         "salt": salt,
-        "balance": balance,
-        "accounts": {},
+        "accounts": 
+            {
+                f"{username}'s Account": AddAcountToUser()
+            },
         "transactions": [],
         "loans": []
     }
@@ -50,6 +51,11 @@ def register_user(username, surname, lastname, password):
     save_database(database)
     messagebox.showinfo("Success", f"User {username} registered successfully!")
     return userId
+
+def AddAcountToUser():
+    return {
+        "balance":0,
+    }
 
 # [[ logs the user in ]]
 def login_user(username, password):
@@ -94,7 +100,6 @@ def visualize_account(user_id):
     tk.Label(account_window, text=f"Username: {user_data['username']}").pack(pady=5)
     tk.Label(account_window, text=f"Surname: {user_data['surname']}").pack(pady=5)
     tk.Label(account_window, text=f"Lastname: {user_data['lastname']}").pack(pady=5)
-    tk.Label(account_window, text=f"Balance: {user_data['balance']}").pack(pady=5)
     tk.Label(account_window, text=f"Accounts: {user_data['accounts']}").pack(pady=5)
     tk.Label(account_window, text=f"Transactions: {user_data['transactions']}").pack(pady=5)
     tk.Label(account_window, text=f"Loans: {user_data['loans']}").pack(pady=5)
@@ -137,21 +142,6 @@ def admin_gui():
 
     tk.Button(admin_window, text="Refresh", command=refresh).pack(pady=5)
 
-    # delete function
-    def delete_user():
-        selected_item = tree.selection()
-        if selected_item:
-            user_id = tree.item(selected_item, "values")[0]
-            database = load_database()
-            del database["users"][user_id]
-            save_database(database)
-            refresh()
-            #messagebox.showinfo("Success", "User deleted successfully!")
-        else:
-            messagebox.showerror("Error", "Please select a user to delete!")
-
-    tk.Button(admin_window, text="Delete User", command=delete_user).pack(pady=5)
-
     # create user function
     def create_user():
         create_window = tk.Toplevel()
@@ -184,6 +174,21 @@ def admin_gui():
 
     tk.Button(admin_window, text="Create User", command=create_user).pack(pady=5)
     tree.bind("<Double-1>", lambda event: visualize_account(tree.item(tree.selection(), "values")[0] if tree.selection() else None))
+
+    # delete function
+    def delete_user():
+        selected_item = tree.selection()
+        if selected_item:
+            user_id = tree.item(selected_item, "values")[0]
+            database = load_database()
+            del database["users"][user_id]
+            save_database(database)
+            refresh()
+            #messagebox.showinfo("Success", "User deleted successfully!")
+        else:
+            messagebox.showerror("Error", "Please select a user to delete!")
+
+    tk.Button(admin_window, text="Delete User", command=delete_user).pack(pady=5)
     refresh()
 
 # [[ authentication gui ]]

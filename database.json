@@ -1,35 +1,16 @@
 {
     "users": {
-        "ebef3511-42b9-48ea-a4dc-f4fdc9b67778": {
-            "username": "admin",
+        "f9b91e10-f60d-4bcb-bd06-1d6287b5dc22": {
+            "username": "Pepsi",
             "surname": "Christoffer",
-            "lastname": "Damrong Blond Schj\u00f8dt",
-            "password": "078db3a50910ac51b82dfd200ea55e3cb2a2423ac8a213587a560cdaf3c71018",
-            "salt": "6db373eb-6c56-4fa5-ae01-29a7d22797a5",
-            "balance": 12000000000000000,
-            "accounts": {},
-            "transactions": [],
-            "loans": []
-        },
-        "10a95ad7-11e0-4dcf-a2eb-57f25eaffbe8": {
-            "username": "PepsiCo",
-            "surname": "Christoffer",
-            "lastname": "Damrong Blond Schj\u00f8dt",
-            "password": "5cf0556288466daba2ffdf9f79aa12406f65d277555f610327b9056cb8022eb5",
-            "salt": "7ae2c8b4-fa60-4ca0-95c5-f80f357f70a3",
-            "balance": 599123491512348591239549567343573534,
-            "accounts": {},
-            "transactions": [],
-            "loans": []
-        },
-        "b71fb8e5-1865-4f92-99fb-15e85103da0b": {
-            "username": "Coca-Cola",
-            "surname": "Santa",
-            "lastname": "Claus",
-            "password": "b8e4e3fd8146bb5e198016c1b6bd11a9c7ac0735756c0f5b3157da1b5a336634",
-            "salt": "9e0f6e3f-149d-45a8-831c-6769274a9c75",
-            "balance": 536,
-            "accounts": {},
+            "lastname": "Damrong",
+            "password": "2a4266b8217b40351eac9950a425cefda6d9ac9350a3946c5ef68926415004f4",
+            "salt": "c11e9afb-c793-49de-b611-b4ed5ae1ddd3",
+            "accounts": {
+                "Pepsi's Account": {
+                    "balance": 0
+                }
+            },
             "transactions": [],
             "loans": []
         }
