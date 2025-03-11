@@ -1,13 +1,13 @@
 {
     "users": {
-        "f9b91e10-f60d-4bcb-bd06-1d6287b5dc22": {
-            "username": "Pepsi",
-            "surname": "Christoffer",
-            "lastname": "Damrong",
-            "password": "2a4266b8217b40351eac9950a425cefda6d9ac9350a3946c5ef68926415004f4",
-            "salt": "c11e9afb-c793-49de-b611-b4ed5ae1ddd3",
+        "79fb9b28-f280-4fcb-b47c-cb3df9f71bcb": {
+            "username": "Test",
+            "surname": "Test",
+            "lastname": "Test",
+            "password": "e1f1ce3199586b82c4610b5e5396e46014652f869d3756260ea24225d3f1a54f",
+            "salt": "54996102-538f-4b7b-af51-eee83fe1aebe",
             "accounts": {
-                "Pepsi's Account": {
+                "Test's Account": {
                     "balance": 0
                 }
             },

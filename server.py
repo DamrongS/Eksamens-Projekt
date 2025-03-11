@@ -54,7 +54,7 @@ def register_user(username, surname, lastname, password):
 
 def AddAcountToUser():
     return {
-        "balance":0,
+        "balance": 0
     }
 
 # [[ logs the user in ]]
@@ -65,12 +65,12 @@ def login_user(username, password):
             salt = userData["salt"]
             hashedPassword = userData["password"]
             if superSecretHashingAlgorithm(password, salt) == hashedPassword:
-                messagebox.showinfo("Login Success", f"Welcome {userData['surname']} {userData['lastname']}!")
+                #messagebox.showinfo("Login Success", f"Welcome {userData['surname']} {userData['lastname']}!")
                 return userId
             else:
-                messagebox.showerror("Error", "Invalid password!")
+                #messagebox.showerror("Error", "Invalid password!")
                 return None
-    messagebox.showerror("Error", "Invalid username!")
+    #messagebox.showerror("Error", "Invalid username!")
     return None
 
 # [[ logs the admin into the admin panel ]]
@@ -195,7 +195,7 @@ def admin_gui():
 def create_gui():
     root = tk.Tk()
     root.title("User Authentication")
-    root.geometry("400x300")
+    root.geometry("400x600")
 
     tk.Label(root, text="Username:").pack(pady=5)
     username_entry = tk.Entry(root)
